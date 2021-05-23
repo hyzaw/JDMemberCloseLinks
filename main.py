@@ -29,9 +29,9 @@ def get_shop_cards(ck):
         'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'content-length': '60'
         }
-
+    proxies = { "http": None, "https": None}
     card_list = []
-    resp = post(url, headers=headers, data=payload)
+    resp = post(url, headers=headers, data=payload, proxies=proxies)
     ret = json_loads(resp.text)
     if ret["code"] == "0":
         if ret["message"] == "用户未登录":
