@@ -1,5 +1,7 @@
 # JDMemberCloseLinks
 
+本项目旨在使用京东cookie一键生成所有退会链接
+
 本项目大部分代码基于 https://github.com/yqchilde/JDMemberCloseAccount （MIT协议开源）
 
 ## 使用方法
