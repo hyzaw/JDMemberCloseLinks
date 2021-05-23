@@ -64,3 +64,6 @@ for card in card_list:
 
 
 print ("\n\n本项目开源地址为：https://www.github.com/hyzaw/JDMemberCloseLinks")
+
+
+input("按回车退出程序")
