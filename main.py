@@ -35,7 +35,7 @@ def get_shop_cards(ck):
     ret = json.loads(resp.text)
     if ret["code"] == "0":
         if ret["message"] == "用户未登录":
-            print("config.json 中的 mobile_cookie 值有误，请确保pt_key和pt_pin都存在，如都存在请检查是否失效")
+            print("请输入正确的京东cookie")
             sys.exit(1)
 
         if "cardList" not in ret["result"]:
