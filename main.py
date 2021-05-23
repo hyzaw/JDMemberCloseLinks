@@ -1,12 +1,7 @@
 from requests import post
-<<<<<<< HEAD
 from sys import exit as sys_exit
 from json import loads as json_loads
-=======
-import os
-import sys
-import json
->>>>>>> 55bd67cd66056a325ea70dff66664c9defe2de3c
+
 
 def get_shop_cards(ck):
     """
@@ -37,19 +32,11 @@ def get_shop_cards(ck):
 
     card_list = []
     resp = post(url, headers=headers, data=payload)
-<<<<<<< HEAD
     ret = json_loads(resp.text)
     if ret["code"] == "0":
         if ret["message"] == "用户未登录":
             print("请输入正确的京东cookie")
             sys_exit(1)
-=======
-    ret = json.loads(resp.text)
-    if ret["code"] == "0":
-        if ret["message"] == "用户未登录":
-            print("请输入正确的京东cookie")
-            sys.exit(1)
->>>>>>> 55bd67cd66056a325ea70dff66664c9defe2de3c
 
         if "cardList" not in ret["result"]:
             print("当前卡包中会员店铺为0个")
