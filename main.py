@@ -1,4 +1,4 @@
-import requests
+from requests import post
 import os
 import sys
 import json
@@ -31,7 +31,7 @@ def get_shop_cards(ck):
         }
 
     card_list = []
-    resp = requests.post(url, headers=headers, data=payload)
+    resp = post(url, headers=headers, data=payload)
     ret = json.loads(resp.text)
     if ret["code"] == "0":
         if ret["message"] == "用户未登录":
