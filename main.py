@@ -1,6 +1,7 @@
 from requests import post
 from sys import exit as sys_exit
 from json import loads as json_loads
+import logging
 
 
 def get_shop_cards(ck):
@@ -51,19 +52,35 @@ def get_shop_cards(ck):
 ck = input("请输入你的京东cookie（含有py_key和pt_pin）：")
 card_list = get_shop_cards(ck)
 
+# 配置logging输出日志
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('')
+# 使用FileHandler输出到文件
+fh = logging.FileHandler('log.log',mode='w')
+fh.setLevel(logging.INFO)
+fh.setFormatter(formatter)
+# 使用StreamHandler输出到屏幕
+ch = logging.StreamHandler()
+ch.setLevel(logging.INFO)
+ch.setFormatter(formatter)
+# 添加两个Handler
+logger.addHandler(ch)
+logger.addHandler(fh)
+
 # 判定一下是否有会员卡
 if len(card_list) == 0:
-    print ("当前没有加入的店铺信息")
+    logger.info ("当前没有加入的店铺信息")
     sys_exit (0)
     
-print("本次运行获取到", len(card_list), "家店铺会员信息")
+logger.info("本次运行获取到" + str(len(card_list)) + "家店铺会员信息")
 
 for card in card_list:
-    print("店铺名称：" + card["brandName"])
-    print("注销地址：https://shopmember.m.jd.com/member/memberCloseAccount?venderId=" + card["brandId"])
+    logger.info("店铺名称：" + card["brandName"])
+    logger.info("注销地址：https://shopmember.m.jd.com/member/memberCloseAccount?venderId=" + card["brandId"])
 
 
-print ("\n\n本项目开源地址为：https://www.github.com/hyzaw/JDMemberCloseLinks")
+logger.info("\n\n本项目开源地址为：https://www.github.com/hyzaw/JDMemberCloseLinks")
 
 
 input("按回车退出程序")
