@@ -1,33 +1,42 @@
 # JDMemberCloseLinks
 
-±¾ÏîÄ¿Ö¼ÔÚÊ¹ÓÃ¾©¶«cookieÒ»¼üÉú³ÉËùÓĞÍË»áÁ´½Ó
+æœ¬é¡¹ç›®æ—¨åœ¨ä½¿ç”¨äº¬ä¸œcookieä¸€é”®ç”Ÿæˆæ‰€æœ‰é€€ä¼šé“¾æ¥
 
-±¾ÏîÄ¿´ó²¿·Ö´úÂë»ùÓÚ https://github.com/yqchilde/JDMemberCloseAccount £¨MITĞ­Òé¿ªÔ´£©
+æœ¬é¡¹ç›®å¤§éƒ¨åˆ†ä»£ç åŸºäº https://github.com/yqchilde/JDMemberCloseAccount ï¼ˆMITåè®®å¼€æºï¼‰
 
-## Ê¹ÓÃ·½·¨
+## ä½¿ç”¨æ–¹æ³•
 
-1. ¿ËÂ¡µ½±¾µØ
+1. å…‹éš†åˆ°æœ¬åœ°
 
     ```shell
     git clone https://github.com/hyzaw/JDMemberCloseLinks.git
     ```
 
-2. °²×°ËùĞèÒªµÄ°ü
-
+2. å®‰è£…æ‰€éœ€è¦çš„ä¾èµ–åŒ…
 
 
     ```shell
 
-    pip install -r requirements.txt
+    pip install -r requirements.txt 
+    æˆ– 
+    pip3 install -r requirements.txt
 
     ```
+    å½“ç½‘é€Ÿå¾ˆæ…¢å¼å¯ä»¥è€ƒè™‘ï¼Œå…ˆæ·»åŠ pipçš„æ¸…åæºåï¼Œå†æ‰§è¡Œä¸Šè¿°å‘½ä»¤
+    ```
+    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+    æˆ–
+    pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+    ```
 
-3. ÔËĞĞ³ÌĞò
+3. è¿è¡Œç¨‹åº
 
     ```shell
 
     python main.py
+    æˆ–
+    python3 main.py
     ```
 
-## ÌáĞÑ
-### Èç¹û³öÏÖÉÁÍË»ò±¨´í£¬Çë³¢ÊÔ¹Ø±Õ´úÀíÈí¼ş£¡
+## æ³¨æ„
+   ç”±äºï¼Œè„šæœ¬è¿è¡Œæ—¶éœ€è¦è¿æ¥åˆ°äº¬ä¸œï¼Œéœ€è¦å›½å†…ipè¿æ¥ã€‚ä½¿ç”¨ä»£ç†æ—¶å¦‚æœå‡ºç°é—ªé€€æˆ–æŠ¥é”™ï¼Œè¯·å°è¯•å…³é—­ä»£ç†è½¯ä»¶ï¼
