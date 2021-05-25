@@ -36,11 +36,11 @@ def get_shop_cards(ck):
     ret = json_loads(resp.text)
     if ret["code"] == "0":
         if ret["message"] == "用户未登录":
-            print("请输入正确的京东cookie")
+            logger.info("请输入正确的京东cookie")
             sys_exit(1)
 
         if "cardList" not in ret["result"]:
-            print("当前卡包中会员店铺为0个")
+            logger.info("当前卡包中会员店铺为0个")
             sys_exit(1)
 
         card_list = (ret["result"]["cardList"])
@@ -76,7 +76,7 @@ if len(card_list) == 0:
 logger.info("本次运行获取到" + str(len(card_list)) + "家店铺会员信息")
 
 for card in card_list:
-    logger.info("店铺名称：" + card["brandName"])
+    logger.info("会员名称：" + card["brandName"])
     logger.info("注销地址：https://shopmember.m.jd.com/member/memberCloseAccount?venderId=" + card["brandId"])
 
 
