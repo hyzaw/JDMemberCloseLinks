@@ -14,27 +14,31 @@
 
 2. 安装所需要的依赖包
 
-
-    ```shell
-
-    pip install -r requirements.txt 
-    或 
-    pip3 install -r requirements.txt
-
     ```
+    pip install -r requirements.txt 
+    ```
+    或 
+    ```
+    pip3 install -r requirements.txt
+    ```
+    
     当网速很慢式可以考虑，先添加pip的清华源后，再执行上述命令
+    
     ```
     pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+    ```
     或
+    ```
     pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
     ```
 
 3. 运行程序
 
-    ```shell
-
+    ```
     python main.py
+    ```
     或
+    ```
     python3 main.py
     ```
 
